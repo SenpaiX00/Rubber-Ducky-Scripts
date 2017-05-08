@@ -7,3 +7,5 @@ I will update this README as I make updates to the repo.
 
 Need to know:
 Don't know what the USB Rubber Ducky is? Find it here: https://hakshop.com/products/usb-rubber-ducky-deluxe
+
+More info and to see the Rubber Ducky get a cameo in Mr. Robot: https://www.hak5.org/blog/15-second-password-hack-mr-robot-style
